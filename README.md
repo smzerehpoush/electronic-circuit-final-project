@@ -1,7 +1,7 @@
 #  Electronic Circuit Final Project.
 
 prerequisite:
-dotnet 5: [link](https://dotnet.microsoft.com/download)
+.NET Framework SDK Version 5.0: [link](https://dotnet.microsoft.com/download)
 
 All You need to do is paste these commands into terminal :
 
