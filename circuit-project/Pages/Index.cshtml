@@ -1,0 +1,168 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<html class="client-nojs" lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8"/>
+
+    @* <link rel="stylesheet" href="~/css/style1.css"/> *@
+    <meta name="ResourceLoaderDynamicStyles" content=""/>
+    <link rel="stylesheet" href="~/css/style1.css"/>
+    <title>نمایش آرایش الکترونی عناصر</title>
+
+</head>
+
+<body di>
+<h2>
+    پروژه درس مدار الکترونیکی
+</h2>
+<h2>
+    استاد راهنما : مهندس اکبر رنجبر
+</h2>
+<h3>
+    دانشجو : سید مهدیار زره پوش
+</h3>
+<h4>
+    952164008
+</h4>
+<form action="api/v1/electron-configuration" method="post" onsubmit="AJAXSubmit(this);return false;">
+    <label for="elements">عنصر مورد نظر را انتخاب کنید.</label>
+    <select id="elements" name="atomicNumber">
+        <option value="1">1 H Hydrogen</option>
+        <option value="2">2 He Helium</option>
+        <option value="3">3 Li Lithium</option>
+        <option value="4">4 Be Beryllium</option>
+        <option value="5">5 B Boron</option>
+        <option value="6">6 C Carbon</option>
+        <option value="7">7 N Nitrogen</option>
+        <option value="8">8 O Oxygen</option>
+        <option value="9">9 F Fluorine</option>
+        <option value="10">10 Ne Neon</option>
+        <option value="11">11 Na Sodium</option>
+        <option value="12">12 Mg Magnesium</option>
+        <option value="13">13 Al Aluminium</option>
+        <option value="14">14 Si Silicon</option>
+        <option value="15">15 P Phosphorus</option>
+        <option value="16">16 S Sulfur</option>
+        <option value="17">17 Cl Chlorine</option>
+        <option value="18">18 Ar Argon</option>
+        <option value="19">19 K Potassium</option>
+        <option value="20">20 Ca Calcium</option>
+        <option value="21">21 Sc Scandium</option>
+        <option value="22">22 Ti Titanium</option>
+        <option value="23">23 V Vanadium</option>
+        <option value="24">24 Cr Chromium</option>
+        <option value="25">25 Mn Manganese</option>
+        <option value="26">26 Fe Iron</option>
+        <option value="27">27 Co Cobalt</option>
+        <option value="28">28 Ni Nickel</option>
+        <option value="29">29 Cu Copper</option>
+        <option value="30">30 Zn Zinc</option>
+        <option value="31">31 Ga Gallium</option>
+        <option value="32">32 Ge Germanium</option>
+        <option value="33">33 As Arsenic</option>
+        <option value="34">34 Se Selenium</option>
+        <option value="35">35 Br Bromine</option>
+        <option value="36">36 Kr Krypton</option>
+        <option value="37">37 Rb Rubidium</option>
+        <option value="38">38 Sr Strontium</option>
+        <option value="39">39 Y Yttrium</option>
+        <option value="40">40 Zr Zirconium</option>
+        <option value="41">41 Nb Niobium</option>
+        <option value="42">42 Mo Molybdenum</option>
+        <option value="43">43 Tc Technetium</option>
+        <option value="44">44 Ru Ruthenium</option>
+        <option value="45">45 Rh Rhodium</option>
+        <option value="46">46 Pd Palladium</option>
+        <option value="47">47 Ag Silver</option>
+        <option value="48">48 Cd Cadmium</option>
+        <option value="49">49 In Indium</option>
+        <option value="50">50 Sn Tin</option>
+        <option value="51">51 Sb Antimony</option>
+        <option value="52">52 Te Tellurium</option>
+        <option value="53">53 I Iodine</option>
+        <option value="54">54 Xe Xenon</option>
+        <option value="55">55 Cs Cesium</option>
+        <option value="56">56 Ba Barium</option>
+        <option value="57">57 La Lanthanum</option>
+        <option value="58">58 Ce Cerium</option>
+        <option value="59">59 Pr Praseodymium</option>
+        <option value="60">60 Nd Neodymium</option>
+        <option value="61">61 Pm Promethium</option>
+        <option value="62">62 Sm Samarium</option>
+        <option value="63">63 Eu Europium</option>
+        <option value="64">64 Gd Gadolinium</option>
+        <option value="65">65 Tb Terbium</option>
+        <option value="66">66 Dy Dysprosium</option>
+        <option value="67">67 Ho Holmium</option>
+        <option value="68">68 Er Erbium</option>
+        <option value="69">69 Tm Thulium</option>
+        <option value="70">70 Yb Ytterbium</option>
+        <option value="71">71 Lu Lutetium</option>
+        <option value="72">72 Hf Hafnium</option>
+        <option value="73">73 Ta Tantalum</option>
+        <option value="74">74 W Tungsten</option>
+        <option value="75">75 Re Rhenium</option>
+        <option value="76">76 Os Osmium</option>
+        <option value="77">77 Ir Iridium</option>
+        <option value="78">78 Pt Platinum</option>
+        <option value="79">79 Au Gold</option>
+        <option value="80">80 Hg Mercury</option>
+        <option value="81">81 Tl Thallium</option>
+        <option value="82">82 Pb Lead</option>
+        <option value="83">83 Bi Bismuth</option>
+        <option value="84">84 Po Polonium</option>
+        <option value="85">85 At Astatine</option>
+        <option value="86">86 Rn Radon</option>
+        <option value="87">87 Fr Francium</option>
+        <option value="88">88 Ra Radium</option>
+        <option value="89">89 Ac Actinium</option>
+        <option value="90">90 Th Thorium</option>
+        <option value="91">91 Pa Protactinium</option>
+        <option value="92">92 U Uranium</option>
+        <option value="93">93 Np Neptunium</option>
+        <option value="94">94 Pu Plutonium</option>
+        <option value="95">95 Am Americium</option>
+        <option value="96">96 Cm Curium</option>
+        <option value="97">97 Bk Berkelium</option>
+        <option value="98">98 Cf Californium</option>
+        <option value="99">99 Es Einsteinium</option>
+        <option value="100">100 Fm Fermium</option>
+        <option value="101">101 Md Mendelevium</option>
+        <option value="102">102 No Nobelium</option>
+        <option value="103">103 Lr Lawrencium</option>
+        <option value="104">104 Rf Rutherfordium</option>
+    </select>
+    <input type="submit" value="ارسال">
+</form>
+
+<table id="electron-configuration-table" class="wikitable">
+    <tbody>
+    </tbody>
+</table>
+</body>
+
+@section Scripts {
+    <script>
+    "use strict";
+    
+    async function AJAXSubmit (oFormElement) {
+      const formData = new FormData(oFormElement);
+            try {
+              const response = await fetch(oFormElement.action, {
+                method: 'POST',
+                body: formData
+              });
+               $('#electron-configuration-table').empty();
+              response.text().then(function (text) {
+                  $(text).appendTo('#electron-configuration-table');
+              });
+            } catch (error) {
+              console.error('Error:', error);
+            }
+          }
+
+  </script>
+}

@@ -8,11 +8,11 @@ using Microsoft.Extensions.Logging;
 
 namespace circuit_project.Pages
 {
-    public class ElectronConfigurationModel : PageModel
+    public class IndexModel : PageModel
     {
-        private readonly ILogger<ElectronConfigurationModel> _logger;
+        private readonly ILogger<IndexModel> _logger;
 
-        public ElectronConfigurationModel(ILogger<ElectronConfigurationModel> logger)
+        public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
         }
